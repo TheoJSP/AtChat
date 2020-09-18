@@ -2,7 +2,7 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-#chat-container{
+#container-chat{
     max-width: 600px;
     margin: 30px auto;
     border: 1px solid #ddd;
