@@ -1,35 +1,38 @@
+//Se inicializa los frameworks
 const express = require("express");
 const path = require("path");
 const app = express();
 
-//setings
+//Setings de express
 app.set("port", 3000);
 
-//static files
+//Static files
 app.use(express.static(path.join(__dirname, "/public")));
 
-//Start Server
+//Start Server(Listen express)
 const server = app.listen(app.get("port"),()=>{
     console.log("server on port:", app.get("port"));
   });
 
 
-//Configuracion socket 
+//Configuracion inicial socket 
 const SocketIO = require("socket.io");
 const io = SocketIO(server);
 
-//se inicia el socket
+//Se inicia el socket
 io.on("connection", (socket)=>{
     console.log("Nueva conexión:", socket.id)
 
-    //On escucha , emit manda
+    //Escucha lo que manda el JS 
     socket.on("chat:message", (data) =>{
+        //Se emite a todos el msg
         io.sockets.emit("chat:message", data);
         console.log(data);
     });
 
+    //Escucha lo que manda el JS 
     socket.on("chat:typing", (data)=>{
-        //se manda a todos menos al emisor 
+        //Se manda a todos menos al emisor 
         socket.broadcast.emit("chat:typing", data);
     })
 });
