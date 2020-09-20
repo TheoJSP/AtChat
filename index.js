@@ -14,14 +14,13 @@ const server = app.listen(app.get("port"),()=>{
     console.log("server on port:", app.get("port"));
   });
 
-
 //Configuracion inicial socket 
 const SocketIO = require("socket.io");
 const io = SocketIO(server);
 
 //Se inicia el socket
 io.on("connection", (socket)=>{
-    console.log("Nueva conexión:", socket.id)
+    console.log("Nueva conexión:", socket.id);
 
     //Escucha lo que manda el JS 
     socket.on("chat:message", (data) =>{
