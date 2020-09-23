@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CUSTOM CSS-->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="main.css">
     <!--FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <!--BOOSTRAP-->
     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    
+  
     <title>Chat</title>
 </head>
 
@@ -20,15 +22,15 @@
             <div class="col-lg-8">
                 <div class="card text-center m-5" id="chat-window">
                     <div class="card-body">
-                        <div class="input-group">
+                        <div class="">
                             <div id="output"></div>
                         </div>
                         <div id="actions"></div>
                         <div class="form-group mt-2">
-                            <input class="form-control" type="text" id="username" placeholder="Username">
+                            <input class="form-control" type="text" id="username" placeholder="Username" autofocus>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="text" id="message" placeholder="Message">
+                            <input class="form-control" type="text" id="message" placeholder="Message" >
                         </div>
                         <button id="send" class="btn btn-success btn-block">Enviar</button>
                     </div>
@@ -38,6 +40,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="chat.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
