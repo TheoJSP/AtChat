@@ -1,12 +1,11 @@
 //Se inicializa los frameworks
 const express = require("express");
 const path = require("path");
-const passport = require("passport")
-const cookieParser = require("cookie-parser")
-const session = require("express-session");
-const PassportLocal = require("passport-local").Strategy
+
 
 const app = express();
+
+
 
 //Setings de express
 app.set("port", 3000);
