@@ -1,13 +1,24 @@
 //Se inicializa los frameworks
 const express = require("express");
 const path = require("path");
+const passport = require("passport")
+const cookieParser = require("cookie-parser")
+const session = require("express-session");
+const PassportLocal = require("passport-local").Strategy
+
 const app = express();
 
 //Setings de express
 app.set("port", 3000);
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine","ejs");
+app.engine("html", require("ejs").renderFile);
 
 //Static files
 app.use(express.static(path.join(__dirname, "/public")));
+
+//Routes 
+app.use(require("./routes/index"))
 
 //Start Server(Listen express)
 const server = app.listen(app.get("port"),()=>{
