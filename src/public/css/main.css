@@ -5,18 +5,8 @@ body{
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-
-/*Login*/
-body {
-    font-family: "Lato", sans-serif;
-}
-
-
-
-.main-head{
-    height: 150px;
-    background: #FFF;
-   
+.main {
+    padding: 0px 10px;
 }
 
 .sidenav {
@@ -26,26 +16,18 @@ body {
     padding-top: 20px;
 }
 
-
-.main {
-    padding: 0px 10px;
+.profile-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
 }
 
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
 }
 
-@media screen and (max-width: 450px) {
-    .login-form{
-        margin-top: 10%;
-    }
-
-    .register-form{
-        margin-top: 10%;
-    }
-}
-
 @media screen and (min-width: 768px){
+    
     .main{
         margin-left: 40%; 
     }
@@ -57,28 +39,4 @@ body {
         top: 0;
         left: 0;
     }
-
-    .login-form{
-        margin-top: 80%;
-    }
-
-    .register-form{
-        margin-top: 20%;
-    }
-}
-
-
-.login-main-text{
-    margin-top: 20%;
-    padding: 60px;
-    color: #fff;
-}
-
-.login-main-text h2{
-    font-weight: 300;
-}
-
-.btn-black{
-    background-color: #000 !important;
-    color: #fff;
 }
