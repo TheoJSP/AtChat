@@ -45,23 +45,27 @@ window.onload = function(){
             console.log("entre")
             //actions.innerHTML = " "
             output.innerHTML += `
-            <div class="input-group mt-2 text-center ">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">${data.username}</span>
+            <div class="box-msg">
+                <div class="dat-user-e">
+                    <span class="" id="basic-addon2">${data.username}: </span>
                 </div>
-                <input  type="text" class="form-control font-weight-bold" disabled=disabled value="${data.message}">
-            </div>
+                <div class="dat-msg">
+                     <span  id="basic-addon2">${data.message}</span>
+                </div>
+            </div> 
         `
             //si es el emisor
         } else if (data.username == username.value) {
             console.log("entre")
             //actions.innerHTML = " "
             output.innerHTML += ` 
-            <div class="input-group mt-2 ">
-            <input type="text" class="form-control font-weight-bold" disabled=disabled value="${data.message}" >
-            <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2">${data.username}</span>
-            </div>
+            <div class="box-msg">
+                <div class="dat-user-r">
+                    <span class="">${data.username}: </span>
+                </div>
+                <div class="dat-msg">
+                    <span class="" id="basic-addon2">${data.message}</span>
+                </div>
             </div> `
 
         }
